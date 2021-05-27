@@ -8,12 +8,12 @@ const CharacterSheet = () => {
     class: '',
     armourClass: '',
     initiative: '',
-    strength: 1,
-    dexterity: 1,
-    constitutuion: 1,
-    intelligence: 1,
-    wisdom: 1,
-    charisma: 1
+    strength: '',
+    dexterity: '',
+    constitution: '',
+    intelligence: '',
+    wisdom: '',
+    charisma: ''
   })
 
   const onChange = (element) => {
@@ -45,8 +45,8 @@ const CharacterSheet = () => {
           onChange={element => onChange(element)}
         />
         <input type='text'
-          name='armorClass'
-          placeholder='armor class'
+          name='armourClass'
+          placeholder='armour class'
           onChange={element => onChange(element)}
         />
         <input type='text'
