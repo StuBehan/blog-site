@@ -23,10 +23,11 @@ const CharacterSheet = () => {
 
   return (
     <div className='character-sheet'>
-      <form>
+      <form className='character-sheet'>
         <input type='text'
           name='name'
           placeholder='name'
+          className='name'
           onChange={element => onChange(element)}
         />
         <input type='text'
