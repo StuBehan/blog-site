@@ -1,3 +1,7 @@
+#root {
+  align-items: center;
+}
+
 /* Header elements */
 
 .header {
@@ -40,23 +44,51 @@
 /* Character sheet */
 
 .character-sheet {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  display: block;
+  width: 90vw;
 }
+
+.character-form {
+  display: grid;
+  gap: 1rem;
+
+  grid-template-areas: 
+  "name name name name name"
+  "race alignment class armour-class initiative"
+  "strength desc desc desc desc"
+  "dexterity desc desc desc desc"
+  "constitution desc desc desc desc"
+  "intelligence desc desc desc desc"
+  "wisdom desc desc desc desc"
+  "charisma desc desc desc desc";
+
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+
+  align-items: center;
+  justify-items: center;
+}
+
+.name {grid-area: name; grid-column: span 5 / auto;}
+.race {grid-area: race;}
+.alignment {grid-area: alignment;}
+.class {grid-area: class;}
+.armour-class {grid-area: armour-class;}
+.initiative {grid-area: initiative;}
+.strength {grid-area: strength;}
+.dexterity {grid-area: dexterity;}
+.constitution {grid-area: constitution;}
+.intelligence {grid-area: intelligence;}
+.wisdom {grid-area: wisdom;}
+.charisma {grid-area: charisma;}
 
 /* Input styles */
 
 input {
-  width: 130px;
-  margin: 10px;
+  width: auto;
   padding: 12px;
   font-size: 16px;
   font-weight: bold;
   color: black;
   border: 2px solid #000000;
-}
-
-.name {
-
 }

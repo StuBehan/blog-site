@@ -23,7 +23,7 @@ const CharacterSheet = () => {
 
   return (
     <div className='character-sheet'>
-      <form className='character-sheet'>
+      <form className='character-form'>
         <input type='text'
           name='name'
           placeholder='name'
@@ -33,61 +33,72 @@ const CharacterSheet = () => {
         <input type='text'
           name='race'
           placeholder='race'
+          className='race'
           onChange={element => onChange(element)}
         />
         <input type='text'
           name='alignment'
           placeholder='alignment'
+          className='alignment'
           onChange={element => onChange(element)}
         />
         <input type='text'
           name='class'
           placeholder='class'
+          className='class'
           onChange={element => onChange(element)}
         />
         <input type='text'
           name='armourClass'
           placeholder='armour class'
+          className='armour-class'
           onChange={element => onChange(element)}
         />
         <input type='text'
           name='initiative'
           placeholder='initiative'
+          className='initiative'
           onChange={element => onChange(element)}
         />
         <input type='number'
           name='strength'
           placeholder='strength'
+          className='strength'
           min='1' max='30'
           onClick={element => onChange(element)}
         />
         <input type='number'
           name='dexterity'
           placeholder='dexterity'
+          className='dexterity'
           min='1' max='30'
           onClick={element => onChange(element)}
         />
         <input type='number'
           name='constitution'
           placeholder='constitution'
+          className='constitution'
           min='1' max='30'
           onClick={element => onChange(element)}
         />
         <input type='number'
           name='intelligence'
           placeholder='intelligence'
+          className='intelligence'
           min='1' max='30'
           onClick={element => onChange(element)}
         />
         <input type='number'
           name='wisdom'
           placeholder='wisdom'
+          className='wisdom'
           min='1' max='30'
           onClick={element => onChange(element)}
         />
         <input type='number'
           name='charisma'
           placeholder='charisma'
+          className='charisma'
           min='1' max='30'
           onClick={element => onChange(element)}
         />
