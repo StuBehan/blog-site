@@ -13,7 +13,8 @@ const CharacterSheet = () => {
     constitution: '',
     intelligence: '',
     wisdom: '',
-    charisma: ''
+    charisma: '',
+    description: ''
   })
 
   const onChange = (element) => {
@@ -23,13 +24,16 @@ const CharacterSheet = () => {
 
   return (
     <div className='character-sheet'>
-      <form className='character-form'>
-        <input type='text'
-          name='name'
-          placeholder='name'
-          className='name'
-          onChange={element => onChange(element)}
-        />
+      <form id='char-sheet' className='character-form'>
+        <div className='name'>
+          <label for="name">Name:</label><br></br>
+          <input type='text'
+            name='name'
+            placeholder='name'
+            className='span'
+            onChange={element => onChange(element)}
+          />
+        </div>
         <input type='text'
           name='race'
           placeholder='race'
@@ -100,6 +104,12 @@ const CharacterSheet = () => {
           placeholder='charisma'
           className='charisma'
           min='1' max='30'
+          onClick={element => onChange(element)}
+        />
+        <textarea form_id='char-sheet'
+          name='description'
+          placeholder='description'
+          className='description span'
           onClick={element => onChange(element)}
         />
       </form>
