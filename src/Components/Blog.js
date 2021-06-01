@@ -1,5 +1,5 @@
 import BlogPost from './BlogPost.js'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const Blog = () => {
   const [blogPost, setBlogPost] = useState({
@@ -12,15 +12,19 @@ const Blog = () => {
   const getBlog = () => {
     setBlogPost({
       title: 'Test Blog Post',
-      image: '',
-      imgAlt: '',
-      body: ''
+      image: 'https://socialmedia4us.files.wordpress.com/2018/01/blog.jpg',
+      imgAlt: 'placeholder image',
+      body: 'This is placeholder text for a blog post'
     })
   }
 
+  useEffect(() => {
+    getBlog()
+  }, [])
+
   return(
     <div>
-      <BlogPost />
+      <BlogPost {...blogPost}/>
     </div>
   )
 }

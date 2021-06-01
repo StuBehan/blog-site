@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import NavBar from './Components/NavBar.js';
 import CharacterSheet from './Components/CharacterSheet.js'
+import Blog from './Components/Blog.js'
 import './App.css';
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
         <NavBar />
       </header>
       <Route path='/character_sheet' component={CharacterSheet}/>
+      <Route path='/blog' component={Blog}/>
     </Router>
   );
 }
