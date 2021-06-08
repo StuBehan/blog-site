@@ -4,6 +4,7 @@ import NavBar from './Components/NavBar.js';
 import CharacterSheet from './Components/CharacterSheet.js'
 import Blog from './Components/Blog.js'
 import './App.css';
+import GitHubLang from './Components/GitHubLang.js';
 
 const App = () => {
 
@@ -15,6 +16,7 @@ const App = () => {
       </header>
       <Route path='/character_sheet' component={CharacterSheet}/>
       <Route path='/blog' component={Blog}/>
+      <Route path='/githublang' component={GitHubLang}/>
     </Router>
   );
 }
