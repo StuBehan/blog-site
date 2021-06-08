@@ -12,6 +12,19 @@ const GitHubLang = () => {
     console.log(username)
   }
 
+  const getUsernameRepos = async () => {
+    const response = await octokit.request("GET /users/{username}/repos", {
+    username: username
+    })
+    return response
+  }
+  
+  const getFavLang = (element) => {
+    element.preventDefault()
+    
+    getUsernameRepos()
+  } 
+
   return(
     <div>
       <form id='githublang-form' className='lang-form'>
@@ -20,6 +33,7 @@ const GitHubLang = () => {
           name='username'
           onChange={element => onChange(element)}  
         />
+        <button onClick={element => getFavLang(element)}>Find the Favourite!</button>
       </form>
     </div>
   )
